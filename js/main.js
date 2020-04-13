@@ -27,10 +27,8 @@ function resizeReset(){
 
 function setStarfield(){
     starfield = [];
-    // var qty = 1;
     var qty = Math.floor(canvas.width/75 * canvas.height/75);
 
-    // console.log("Total stars: "+ qty);
     for(i = 0; i < qty; i++){
 
         starfield.push({
@@ -59,7 +57,6 @@ function draw(){
             0,2*Math.PI
         );
         ctx.globalAlpha = (0.5 + 0.5 * Math.sin((timer + star.twinkleOffset*20)/20)) * ((12 - star.twinkleOffset)/12);
-        // console.log(ctx.globalAlpha);
         ctx.fillStyle = "white";
         ctx.fill();
     });

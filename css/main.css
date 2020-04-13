@@ -1,5 +1,7 @@
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: rooney-sans,Helvetica, Arial, sans-serif; */
+    /* font-family: quicksand,Helvetica, Arial, sans-serif; */
+    font-family: oscine,Helvetica, Arial, sans-serif;
     background-color:#000033;
 }
 
@@ -23,4 +25,21 @@ canvas {
     position: fixed;
     top:0; left:0;
     z-index: -1;
+}
+
+header {
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    font-weight: 400;
+    font-size: 4em;
+    margin:0;
+}
+
+#projects > ol, #projects > ol > li > ul {
+    list-style: none; padding:0;
 }
