@@ -15,7 +15,14 @@ function init(){
         resizeTimer = setTimeout(resizeReset,250);
     });
 
-    $('#scrollDown').css({opacity:0}).hide().delay(2000).show(1).animate({opacity:0.5});
+    $('header').append('<a id="scrollDown"><i class="fas fa-arrow-alt-circle-down"></i><p>&nbsp; Scroll to continue.</p></a>');
+    $('#scrollDown').css({opacity:0})
+        .delay(2000).animate({opacity:0.5},function(){
+            $(this).attr({
+                href:"#downwego",
+                onclick:"scrollToSmooth('projects')"
+            });
+        });
     $('#scrollDown').hover(function(){
         $(this).animate({opacity:1},200);
     },function(){

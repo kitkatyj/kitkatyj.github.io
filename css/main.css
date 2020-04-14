@@ -34,14 +34,25 @@ canvas {
 }
 
 header {
-    height:100vh;
+    height:90vh;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 960px;
+    margin:0 auto;
+    margin-bottom: 4em;
+}
+
+#banner {
+    flex:1;
     display:flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    padding:0 1em;
-    max-width: 960px;
-    margin:0 auto;
+}
+
+#titles {
+    padding: 0 1em;
+    z-index: 1;
 }
 
 header h1 {
@@ -50,16 +61,10 @@ header h1 {
     margin:0;
 }
 
-header h1, header p {
-    z-index: 1;
-}
-
 #characters {
     order:-1;
+    width:100%;
     height:250px;
-    width:250px;
-    margin-top: -50px;
-    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -74,10 +79,10 @@ div.character {
 #pistachio {
     background-image: url(../img/pistachio.svg);
 
-    width:250px;
-    height:250px;
-    right:-25vw;
-    bottom:-50px;
+    width:100px;
+    height:150px;
+    right:10vw;
+    bottom:0;
     
     animation: float 2s ease-in-out infinite;
 }
@@ -85,19 +90,16 @@ div.character {
 #spacepony {
     background-image: url(../img/kosmos.svg);
 
-    width:250px;
-    height:250px;
-    left:-20vw;
+    width:150px;
+    height:200px;
+    left:10vw;
     top:0;
     
     animation: float 2s ease-in-out -0.5s infinite;
 }
 
 #scrollDown {
-    position: absolute;
-    bottom:1em;
-    left:50%;
-    transform: translateX(-50%);
+    align-self: center;
     display:flex;
     text-decoration: none;
     background-color: rgba(255,255,255,0.5);
@@ -131,31 +133,34 @@ section h2 {
     }
 
     #pistachio {    
-        width:300px;
-        height:300px;
+        width:150px;
+        height:200px;
+        bottom:-5vh;
     }
     
     #spacepony {  
-        width:300px;
-        height:300px;
+        width:200px;
+        height:250px;
+        top:-5vh;
     }
 }
 
 @media screen and (min-width: 992px),(orientation:landscape) {
     #characters {
+        order:auto;
         height:auto;
         width:auto;
         margin:0;
     }
 
     #pistachio {
-        right:-80px;
+        right:0;
         bottom:auto;
-        top:5vh;
+        top:10vh;
     }
     
     #spacepony {
-        left:-50px;
+        left:0;
         top:-20vh;
     }
 }
