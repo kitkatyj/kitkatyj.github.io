@@ -15,6 +15,13 @@ function init(){
         resizeTimer = setTimeout(resizeReset,250);
     });
 
+    $('#scrollDown').css({opacity:0}).hide().delay(2000).show(1).animate({opacity:0.5});
+    $('#scrollDown').hover(function(){
+        $(this).animate({opacity:1},200);
+    },function(){
+        $(this).animate({opacity:0.5},200);
+    });
+
     draw();
 }
 
@@ -39,7 +46,7 @@ function setStarfield(){
             "zIndex":2+Math.floor(10*Math.random())
         });
     }
-    console.log(starfield);
+    // console.log(starfield);
 }
 
 function draw(){
@@ -56,7 +63,7 @@ function draw(){
             star.size,
             0,2*Math.PI
         );
-        ctx.globalAlpha = (0.5 + 0.5 * Math.sin((timer + star.twinkleOffset*20)/20)) * ((12 - star.twinkleOffset)/12);
+        ctx.globalAlpha = (0.5 + 0.5 * Math.sin((timer + star.twinkleOffset*20)/20)) * ((12 - star.twinkleOffset)/12)*0.5;
         ctx.fillStyle = "white";
         ctx.fill();
     });
@@ -65,6 +72,12 @@ function draw(){
 
     timer++;
     window.requestAnimationFrame(draw);
+}
+
+function scrollToSmooth(element){
+    $('html, body').animate({
+        scrollTop: $('#'+element).offset().top
+    },1000);
 }
 
 function mod(n, m) {

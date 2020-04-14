@@ -1,3 +1,9 @@
+@keyframes float {
+    0% {background-position: center 0px;}
+    50% {background-position: center 10px;}
+    100% {background-position: center 0px;}
+}
+
 html {
     /* font-family: rooney-sans,Helvetica, Arial, sans-serif; */
     /* font-family: quicksand,Helvetica, Arial, sans-serif; */
@@ -32,14 +38,124 @@ header {
     display:flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    padding:0 1em;
+    max-width: 960px;
+    margin:0 auto;
 }
 
 header h1 {
     font-weight: 400;
-    font-size: 4em;
+    font-size: 3em;
     margin:0;
+}
+
+header h1, header p {
+    z-index: 1;
+}
+
+#characters {
+    order:-1;
+    height:250px;
+    width:250px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+div.character {
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:absolute;
+}
+
+#pistachio {
+    background-image: url(../img/pistachio.svg);
+
+    width:250px;
+    height:250px;
+    right:-25vw;
+    bottom:-50px;
+    
+    animation: float 2s ease-in-out infinite;
+}
+
+#spacepony {
+    background-image: url(../img/kosmos.svg);
+
+    width:250px;
+    height:250px;
+    left:-20vw;
+    top:0;
+    
+    animation: float 2s ease-in-out -0.5s infinite;
+}
+
+#scrollDown {
+    position: absolute;
+    bottom:1em;
+    left:50%;
+    transform: translateX(-50%);
+    display:flex;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.5);
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color:#000033;
+    white-space: nowrap;
+}
+
+#scrollDown p {
+    margin:0;
+}
+
+section h2 {
+    margin: 0;
+    padding:1em;
 }
 
 #projects > ol, #projects > ol > li > ul {
     list-style: none; padding:0;
+}
+
+@media screen and (min-width: 767px) {
+    #characters {
+        margin-bottom: 10vh;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    #pistachio {    
+        width:300px;
+        height:300px;
+    }
+    
+    #spacepony {  
+        width:300px;
+        height:300px;
+    }
+}
+
+@media screen and (min-width: 992px),(orientation:landscape) {
+    #characters {
+        height:auto;
+        width:auto;
+        margin:0;
+    }
+
+    #pistachio {
+        right:-80px;
+        bottom:auto;
+        top:5vh;
+    }
+    
+    #spacepony {
+        left:-50px;
+        top:-20vh;
+    }
 }
