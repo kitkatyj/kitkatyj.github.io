@@ -34,13 +34,14 @@ canvas {
 }
 
 header {
-    height:90vh;
+    height:100vh;
+    box-sizing: border-box;
     display:flex;
     flex-direction: column;
     position: relative;
     max-width: 960px;
     margin:0 auto;
-    margin-bottom: 4em;
+    padding-bottom: 4em;
 }
 
 #banner {
@@ -146,6 +147,10 @@ section h2 {
 }
 
 @media screen and (min-width: 992px),(orientation:landscape) {
+    header {
+        padding-top:4em;
+    }
+
     #characters {
         order:auto;
         height:auto;
