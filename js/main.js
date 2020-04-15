@@ -50,24 +50,45 @@ function loadProject(project){
     var projectCard = $('<li></li>');
     var projectLink = $('<a></a>');
 
+    var projectImgHold = $('<div class="img-hold"></div>');
+    projectLink.append(projectImgHold);
+
+    if(project.img && project.img.length > 0){
+        var projectImg = $('<img src="../img/'+project.img+'">');
+        projectImgHold.append(projectImg);
+    }
+    else {
+        var placehldr = $('<i class="fas fa-shapes"></i>');
+        projectImgHold.addClass('placehldr');
+        projectImgHold.append(placehldr);
+    }
+
+    if(project.highlight){
+        projectLink.addClass("highlight");
+    }
+
+    var projectCaption = $('<div class="project-caption"></div>');
+    
     var projectTitle = $('<h4>'+project.title+'</h4>');
-    projectLink.append(projectTitle);
+    projectCaption.append(projectTitle);
 
     if(project.subtitle && project.subtitle.length > 0){
-        var projectSubtitle = $('<p class="subtitle">'+project.subtitle+'</p>');
-        projectLink.append(projectSubtitle);
+        var projectSubtitle = $('<span class="subtitle">'+project.subtitle+'</span>');
+        projectCaption.append(projectSubtitle);
     }
 
     if(project.description && project.description.length > 0){
         var projectDescription = $('<p class="description">'+project.description+'</p>');
-        projectLink.append(projectDescription);
+        projectCaption.append(projectDescription);
     }
 
     projectLink.attr({
         'href':project.link,
-        'data-type':project.type
+        'data-type':project.type,
+        'target':'_blank'
     });
 
+    projectLink.append(projectCaption);
     projectCard.append(projectLink);
     yearStamp.find('ul').append(projectCard);
 }

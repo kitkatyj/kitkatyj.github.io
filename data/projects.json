@@ -2,38 +2,40 @@
     "projects":[
         {
             "title":"Apple 2",
-            "description":"THE SEQUEL",
+            "description":"Apple interacts with her world",
             "type":"web",
             "link":"/apple-project2",
             "year":2020
         },
         {
             "title":"Lurdball",
-            "description":"",
+            "description":"Left Up Right Down (LURD) Ball",
             "type":"web",
             "link":"/lurdball-project",
             "year":2018
         },
         {
             "title":"Apple",
-            "description":"",
+            "description":"Apple walks around",
             "type":"web",
             "link":"/apple-project",
             "year":2018
         },
         {
             "title":"BFDI Votes",
-            "description":"",
+            "description":"Infographic of votes from the web series Battle for Dream Island.",
             "type":"web",
             "link":"/bfdivotes",
-            "year":2017
+            "year":2017,
+            "img":"bfdivotes.svg"
         },
         {
             "title":"Graph Transformer",
-            "description":"",
+            "description":"Get to know the workings of quadratic equations.",
             "type":"web",
             "link":"/graphtransformer",
-            "year":2017
+            "year":2017,
+            "img":"graph.svg"
         },
         {
             "title":"GovTech's Data Viz Video Challenge 2017",
@@ -41,35 +43,41 @@
             "description":"",
             "type":"vid",
             "link":"https://youtu.be/IHwdncZK8HE",
-            "year":2017
+            "year":2017,
+            "img":"dataviz.jpg",
+            "highlight":true
         },
         {
             "title":"\"A New Pair of Wings\" Music Video",
             "description":"",
             "type":"vid",
             "link":"https://youtu.be/zh4v5DTZYxY",
-            "year":2017
+            "year":2017,
+            "img":"anpow.jpg"
         },
         {
             "title":"Space Unicorn Explores the Solar System",
             "description":"",
             "type":"web",
             "link":"/spaceunicorn-solarsystem",
-            "year":2017
+            "year":2017,
+            "img":"spaceunicorn.svg"
         },
         {
             "title":"Sandbox Elements",
-            "description":"",
+            "description":"Mix and match elements and name them!",
             "type":"web",
             "link":"/sandbox",
-            "year":2016
+            "year":2016,
+            "img":"sandbox.svg"
         },
         {
             "title":"The Cloudsdale Splash Launch Trailer",
             "description":"",
             "type":"vid",
             "link":"https://youtu.be/qer6LfDwvMY",
-            "year":2014
+            "year":2014,
+            "img":"cloudsdale.svg"
         }
     ]
 }
