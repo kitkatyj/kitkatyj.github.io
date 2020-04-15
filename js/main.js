@@ -15,7 +15,7 @@ function init(){
         resizeTimer = setTimeout(resizeReset,250);
     });
 
-    $.get("../data/projects.json",function(data){
+    $.get("data/projects.json",function(data){
         $('#projects').append($('<ol></ol>'));
         data.projects.forEach(function(project){
             loadProject(project);
