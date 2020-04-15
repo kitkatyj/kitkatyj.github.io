@@ -1,0 +1,75 @@
+{
+    "projects":[
+        {
+            "title":"Apple 2",
+            "description":"THE SEQUEL",
+            "type":"web",
+            "link":"/apple-project2",
+            "year":2020
+        },
+        {
+            "title":"Lurdball",
+            "description":"",
+            "type":"web",
+            "link":"/lurdball-project",
+            "year":2018
+        },
+        {
+            "title":"Apple",
+            "description":"",
+            "type":"web",
+            "link":"/apple-project",
+            "year":2018
+        },
+        {
+            "title":"BFDI Votes",
+            "description":"",
+            "type":"web",
+            "link":"/bfdivotes",
+            "year":2017
+        },
+        {
+            "title":"Graph Transformer",
+            "description":"",
+            "type":"web",
+            "link":"/graphtransformer",
+            "year":2017
+        },
+        {
+            "title":"GovTech's Data Viz Video Challenge 2017",
+            "subtitle":"Top Prize",
+            "description":"",
+            "type":"vid",
+            "link":"https://youtu.be/IHwdncZK8HE",
+            "year":2017
+        },
+        {
+            "title":"\"A New Pair of Wings\" Music Video",
+            "description":"",
+            "type":"vid",
+            "link":"https://youtu.be/zh4v5DTZYxY",
+            "year":2017
+        },
+        {
+            "title":"Space Unicorn Explores the Solar System",
+            "description":"",
+            "type":"web",
+            "link":"/spaceunicorn-solarsystem",
+            "year":2017
+        },
+        {
+            "title":"Sandbox Elements",
+            "description":"",
+            "type":"web",
+            "link":"/sandbox",
+            "year":2016
+        },
+        {
+            "title":"The Cloudsdale Splash Launch Trailer",
+            "description":"",
+            "type":"vid",
+            "link":"https://youtu.be/qer6LfDwvMY",
+            "year":2014
+        }
+    ]
+}

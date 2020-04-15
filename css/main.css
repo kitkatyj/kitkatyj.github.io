@@ -33,14 +33,17 @@ canvas {
     z-index: -1;
 }
 
+header, section {
+    box-sizing: border-box;
+    max-width: 960px;
+    margin:0 auto;
+}
+
 header {
     height:100vh;
-    box-sizing: border-box;
     display:flex;
     flex-direction: column;
     position: relative;
-    max-width: 960px;
-    margin:0 auto;
     padding-bottom: 4em;
 }
 
@@ -103,11 +106,8 @@ div.character {
     align-self: center;
     display:flex;
     text-decoration: none;
-    background-color: rgba(255,255,255,0.5);
     align-items: center;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    color:#000033;
+    color:#ffffff;
     white-space: nowrap;
 }
 
@@ -117,11 +117,62 @@ div.character {
 
 section h2 {
     margin: 0;
-    padding:1em;
+    padding-top:1em;
 }
 
 #projects > ol, #projects > ol > li > ul {
-    list-style: none; padding:0;
+    list-style: none;
+}
+
+#projects > ol {
+    text-align: left;
+    padding:0 1em;
+}
+
+#projects > ol > li > ul {
+    padding:0;
+}
+
+#projects > ol > li > ul > li > a, #twitter > a {
+    margin:0.5em 0;
+    display: block;
+    text-decoration: none;
+    padding:0.5em;
+    border-radius: 0.5em;
+    transition: background-color 0.1s;
+}
+
+#projects > ol > li > ul > li > a {
+    background-color: rgba(255,255,255,0.6);
+    color:#000000;
+}
+
+#projects > ol > li > ul > li > a:hover {
+    background-color: rgba(255,255,255,0.8);
+}
+
+#projects > ol > li > ul > li > a > h4, #projects > ol > li > ul > li > a > p, #twitter a > p {
+    margin:0;
+}
+
+#twitter {
+    padding:0 1em;
+}
+
+#twitter > a {
+    margin-top:1em;
+    padding:1em;
+    background-color: rgba(29, 161, 242,0.6);
+    color:#ffffff;
+}
+
+#twitter > a:hover {
+    background-color: rgba(29, 161, 242,0.8);
+}
+
+#twitter > a > h3 {
+    font-size: 2em;
+    margin:0.5em 0;
 }
 
 @media screen and (min-width: 767px) {
@@ -144,11 +195,15 @@ section h2 {
         height:250px;
         top:-5vh;
     }
+
+    #twitter > a{
+        display:inline-block;
+    }
 }
 
 @media screen and (min-width: 992px),(orientation:landscape) {
     header {
-        padding-top:4em;
+        padding-top:6em;
     }
 
     #characters {

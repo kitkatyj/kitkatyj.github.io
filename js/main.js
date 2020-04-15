@@ -4,7 +4,7 @@ var starfield = [];
 var timer = 0;
 
 function init(){
-    console.log('Ready!');
+    console.log('%c"Imagination will often carry us to worlds that never were. But without it we go nowhere." -Carl Sagan',"font-size:1.5em; font-style:italic; font-family:'Courier New',monospace; padding:0.5em 0; line-height:1.5;");
 
     canvas = document.getElementById('stars-bg');
     ctx = canvas.getContext('2d');
@@ -15,21 +15,61 @@ function init(){
         resizeTimer = setTimeout(resizeReset,250);
     });
 
-    $('header').append('<a id="scrollDown"><i class="fas fa-arrow-alt-circle-down"></i><p>&nbsp; Scroll to continue.</p></a>');
+    $.get("/data/projects.json",function(data){
+        $('#projects').append($('<ol></ol>'));
+        data.projects.forEach(function(project){
+            loadProject(project);
+        });
+    });
+
+    $('header').append('<a id="scrollDown"><i class="fas fa-arrow-alt-circle-down"></i><p>&nbsp; Scroll to continue</p></a>');
     $('#scrollDown').css({opacity:0})
-        .delay(2000).animate({opacity:0.5},function(){
+        .delay(2500).animate({opacity:0.5},function(){
             $(this).attr({
                 href:"#downwego",
                 onclick:"scrollToSmooth('projects')"
             });
+        })
+        .hover(function(){
+            $(this).animate({opacity:1},200);
+        },function(){
+            $(this).animate({opacity:0.5},200);
         });
-    $('#scrollDown').hover(function(){
-        $(this).animate({opacity:1},200);
-    },function(){
-        $(this).animate({opacity:0.5},200);
-    });
 
     draw();
+}
+
+function loadProject(project){
+    var yearStamp = $("#projects ol li:contains('"+project.year+"')");
+
+    if(yearStamp.length === 0){
+        yearStamp = $('<li><h3>'+project.year+'</h3><ul></ul></li>');
+        $('#projects ol').append(yearStamp);
+    }
+
+    var projectCard = $('<li></li>');
+    var projectLink = $('<a></a>');
+
+    var projectTitle = $('<h4>'+project.title+'</h4>');
+    projectLink.append(projectTitle);
+
+    if(project.subtitle && project.subtitle.length > 0){
+        var projectSubtitle = $('<p class="subtitle">'+project.subtitle+'</p>');
+        projectLink.append(projectSubtitle);
+    }
+
+    if(project.description && project.description.length > 0){
+        var projectDescription = $('<p class="description">'+project.description+'</p>');
+        projectLink.append(projectDescription);
+    }
+
+    projectLink.attr({
+        'href':project.link,
+        'data-type':project.type
+    });
+
+    projectCard.append(projectLink);
+    yearStamp.find('ul').append(projectCard);
 }
 
 function resizeReset(){
@@ -62,7 +102,7 @@ function draw(){
     ctx.fillStyle = "#000033";
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    starfield.forEach(function(star,index){
+    starfield.forEach(function(star){
         ctx.beginPath();
         ctx.arc(
             star.posX,
@@ -74,8 +114,6 @@ function draw(){
         ctx.fillStyle = "white";
         ctx.fill();
     });
-
-    // console.log(window.pageYOffset);
 
     timer++;
     window.requestAnimationFrame(draw);
