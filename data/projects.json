@@ -5,21 +5,24 @@
             "description":"Apple interacts with her world",
             "type":"web",
             "link":"/apple-project2",
-            "year":2020
+            "year":2020,
+            "img":"apple2.png"
         },
         {
             "title":"Lurdball",
             "description":"Left Up Right Down (LURD) Ball",
             "type":"web",
             "link":"/lurdball-project",
-            "year":2018
+            "year":2018,
+            "img":"lurdball.svg"
         },
         {
             "title":"Apple",
             "description":"Apple walks around",
             "type":"web",
             "link":"/apple-project",
-            "year":2018
+            "year":2018,
+            "img":"apple.png"
         },
         {
             "title":"BFDI Votes",
@@ -72,7 +75,7 @@
             "img":"sandbox.svg"
         },
         {
-            "title":"The Cloudsdale Splash Launch Trailer",
+            "title":"\"The Cloudsdale Splash\" Launch Trailer",
             "description":"",
             "type":"vid",
             "link":"https://youtu.be/qer6LfDwvMY",
