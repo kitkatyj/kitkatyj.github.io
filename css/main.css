@@ -165,7 +165,7 @@ section h2 {
 
 #twitter > a {
     margin-top:1em;
-    padding:1em 2em;
+    padding:1em;
     background-color: rgba(29, 161, 242,0.6);
     color:#ffffff;
 }
@@ -177,6 +177,10 @@ section h2 {
 #twitter > a > h3 {
     font-size: 2em;
     margin:0.5em 0;
+}
+
+footer {
+    padding:0 1em;
 }
 
 @media screen and (min-width: 767px) {
@@ -200,7 +204,8 @@ section h2 {
         top:-5vh;
     }
 
-    #twitter > a{
+    #twitter > a {
+        padding:1em 2em;
         display:inline-block;
     }
 }
