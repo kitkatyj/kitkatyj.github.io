@@ -54,7 +54,7 @@ function loadProject(project){
     projectLink.append(projectImgHold);
 
     if(project.img && project.img.length > 0){
-        var projectImg = $('<img src="../img/'+project.img+'">');
+        var projectImg = $('<img src="img/'+project.img+'">');
         projectImgHold.append(projectImg);
     }
     else {
