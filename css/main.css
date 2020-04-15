@@ -47,6 +47,10 @@ header {
     padding-bottom: 4em;
 }
 
+section {
+    max-width: 480px;
+}
+
 #banner {
     flex:1;
     display:flex;
@@ -161,7 +165,7 @@ section h2 {
 
 #twitter > a {
     margin-top:1em;
-    padding:1em;
+    padding:1em 2em;
     background-color: rgba(29, 161, 242,0.6);
     color:#ffffff;
 }
