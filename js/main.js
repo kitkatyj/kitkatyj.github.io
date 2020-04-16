@@ -146,7 +146,7 @@ function draw(){
             star.size,
             0,2*Math.PI
         );
-        ctx.globalAlpha = (0.5 + 0.5 * Math.sin((timer + star.twinkleOffset*20)/20)) * ((12 - star.twinkleOffset)/12)*0.5;
+        ctx.globalAlpha = (0.5 + 0.5 * Math.sin((timer + star.twinkleOffset*20)/20)) * ((12 - star.zIndex)/12)*0.6;
         ctx.fillStyle = "white";
         ctx.fill();
     });
