@@ -15,6 +15,11 @@ body {
     text-align: center;
     font-size: 1.5em;
     color:#fff;
+
+    background-image: url(../img/planet-mobile.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #main {
@@ -237,10 +242,21 @@ section h2 {
 }
 
 footer {
-    padding:0 1em;
+    padding:1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+footer p {
+    margin:0;
 }
 
 @media screen and (min-width: 767px) {
+    body {
+        background-image: url(../img/planet-desktop.svg);
+    }
+
     #characters {
         margin-bottom: 10vh;
     }
