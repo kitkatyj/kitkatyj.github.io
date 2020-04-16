@@ -6,7 +6,8 @@
             "type":"web",
             "link":"/apple-project2",
             "year":2020,
-            "img":"apple2.png"
+            "icon":"apple2.png",
+            "preview":"apple2-preview.png"
         },
         {
             "title":"Lurdball",
@@ -14,7 +15,7 @@
             "type":"web",
             "link":"/lurdball-project",
             "year":2018,
-            "img":"lurdball.svg"
+            "icon":"lurdball.svg"
         },
         {
             "title":"Apple",
@@ -22,7 +23,7 @@
             "type":"web",
             "link":"/apple-project",
             "year":2018,
-            "img":"apple.png"
+            "icon":"apple.png"
         },
         {
             "title":"BFDI Votes",
@@ -30,7 +31,7 @@
             "type":"web",
             "link":"/bfdivotes",
             "year":2017,
-            "img":"bfdivotes.svg"
+            "icon":"bfdivotes.svg"
         },
         {
             "title":"Graph Transformer",
@@ -38,7 +39,7 @@
             "type":"web",
             "link":"/graphtransformer",
             "year":2017,
-            "img":"graph.svg"
+            "icon":"graph.svg"
         },
         {
             "title":"GovTech's Data Viz Video Challenge 2017",
@@ -47,8 +48,7 @@
             "type":"vid",
             "link":"https://youtu.be/IHwdncZK8HE",
             "year":2017,
-            "img":"dataviz.jpg",
-            "highlight":true
+            "preview":"dataviz.jpg"
         },
         {
             "title":"\"A New Pair of Wings\" Music Video",
@@ -56,7 +56,7 @@
             "type":"vid",
             "link":"https://youtu.be/zh4v5DTZYxY",
             "year":2017,
-            "img":"anpow.jpg"
+            "icon":"anpow.jpg"
         },
         {
             "title":"Space Unicorn Explores the Solar System",
@@ -64,7 +64,7 @@
             "type":"web",
             "link":"/spaceunicorn-solarsystem",
             "year":2017,
-            "img":"spaceunicorn.svg"
+            "icon":"spaceunicorn.svg"
         },
         {
             "title":"Sandbox Elements",
@@ -72,7 +72,7 @@
             "type":"web",
             "link":"/sandbox",
             "year":2016,
-            "img":"sandbox.svg"
+            "icon":"sandbox.svg"
         },
         {
             "title":"\"The Cloudsdale Splash\" Launch Trailer",
@@ -80,7 +80,7 @@
             "type":"vid",
             "link":"https://youtu.be/qer6LfDwvMY",
             "year":2014,
-            "img":"cloudsdale.svg"
+            "icon":"cloudsdale.svg"
         }
     ]
 }

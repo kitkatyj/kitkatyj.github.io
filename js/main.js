@@ -3,16 +3,25 @@ var resizeTimer;
 var starfield = [];
 var timer = 0;
 
+var ua = window.navigator.userAgent;
+var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+var webkit = !!ua.match(/WebKit/i);
+var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+
 function init(){
     console.log('%c"Imagination will often carry us to worlds that never were. But without it we go nowhere." -Carl Sagan',"font-size:1.5em; font-style:italic; font-family:'Courier New',monospace; padding:0.5em 0; line-height:1.5;");
 
     canvas = document.getElementById('stars-bg');
     ctx = canvas.getContext('2d');
 
+    $('#projects p').remove();
+
     resizeReset();
     window.addEventListener("resize",function(e){
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(resizeReset,250);
+        if(!iOSSafari){
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(resizeReset,250);
+        }
     });
 
     $.get("data/projects.json",function(data){
@@ -50,21 +59,23 @@ function loadProject(project){
     var projectCard = $('<li></li>');
     var projectLink = $('<a></a>');
 
-    var projectImgHold = $('<div class="img-hold"></div>');
-    projectLink.append(projectImgHold);
+    if(project.preview && project.preview.length > 0){
+        var projectPreviewHold = $('<div class="preview-hold"></div>');
+        projectLink.append(projectPreviewHold);
 
-    if(project.img && project.img.length > 0){
-        var projectImg = $('<img src="img/'+project.img+'">');
-        projectImgHold.append(projectImg);
-    }
-    else {
-        var placehldr = $('<i class="fas fa-shapes"></i>');
-        projectImgHold.addClass('placehldr');
-        projectImgHold.append(placehldr);
+        var projectPreview = $('<img src="img/'+project.preview+'">');
+        projectPreviewHold.append(projectPreview);
     }
 
-    if(project.highlight){
-        projectLink.addClass("highlight");
+    var projectCaptionHold = $('<div class="caption-hold"></div>');
+    projectLink.append(projectCaptionHold);
+
+    if(project.icon && project.icon.length > 0){
+        var projectImgHold = $('<div class="icon-hold"></div>');
+        projectCaptionHold.append(projectImgHold);
+
+        var projectIcon = $('<img src="img/'+project.icon+'">');
+        projectImgHold.append(projectIcon);
     }
 
     var projectCaption = $('<div class="project-caption"></div>');
@@ -84,11 +95,10 @@ function loadProject(project){
 
     projectLink.attr({
         'href':project.link,
-        'data-type':project.type,
-        'target':'_blank'
+        'data-type':project.type
     });
 
-    projectLink.append(projectCaption);
+    projectCaptionHold.append(projectCaption);
     projectCard.append(projectLink);
     yearStamp.find('ul').append(projectCard);
 }
