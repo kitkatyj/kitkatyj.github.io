@@ -12,7 +12,7 @@ function init(){
     console.log('%c"Imagination will often carry us to worlds that never were. But without it we go nowhere." -Carl Sagan',"font-size:1.5em; font-style:italic; font-family:'Courier New',monospace; padding:0.5em 0; line-height:1.5;");
 
     canvas = document.getElementById('stars-bg');
-    ctx = canvas.getContext('2d',{ alpha: false });
+    ctx = canvas.getContext('2d');
 
     $('#projects p').remove();
 
