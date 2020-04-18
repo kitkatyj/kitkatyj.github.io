@@ -3,11 +3,6 @@ var resizeTimer;
 var starfield = [];
 var timer = 0;
 
-var ua = window.navigator.userAgent;
-var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
-var webkit = !!ua.match(/WebKit/i);
-var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
-
 function init(){
     console.log('%c"Imagination will often carry us to worlds that never were. But without it we go nowhere." -Carl Sagan',"font-size:1.5em; font-style:italic; font-family:'Courier New',monospace; padding:0.5em 0; line-height:1.5;");
 
@@ -19,10 +14,8 @@ function init(){
     resizeReset(); resizePlanet();
     window.addEventListener("resize",function(e){
         resizePlanet();
-        if(!iOSSafari){
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(resizeReset,250);
-        }
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(resizeReset,250);
     });
 
     $.get("data/projects.json",function(data){

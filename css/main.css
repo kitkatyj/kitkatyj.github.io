@@ -241,6 +241,13 @@ section h2 {
     margin-bottom:0.5em;
 }
 
+#whoisthis div {
+    margin-top: 1em;
+    background-color: rgba(0,0,100,0.5);
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+}
+
 footer {
     padding:1em;
     display: flex;
@@ -308,5 +315,12 @@ footer p {
     #spacepony {
         left:0;
         top:-20vh;
+    }
+}
+
+@media screen and (max-height: 480px){
+    header {
+        padding-top:2em;
+        padding-bottom: 1em;
     }
 }
