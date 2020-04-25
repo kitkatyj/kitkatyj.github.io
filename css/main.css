@@ -52,6 +52,7 @@ header {
 
 section {
     max-width: 480px;
+    padding:0 1em;
 }
 
 #banner {
@@ -129,35 +130,20 @@ section h2 {
 
 #projects > ol, #projects > ol > li > ul {
     list-style: none;
-}
-
-#projects > ol {
-    text-align: left;
-    padding:0 1em;
-}
-
-#projects > ol > li > ul {
     padding:0;
+    text-align: left;
 }
 
-#projects > ol > li > ul > li > a, #twitter > a {
+#projects > ol > li > ul > li > a, .bubble {
     margin:0.5em 0;
-    display: block;
     text-decoration: none;
     border-radius: 0.5em;
     transition: background-color 0.1s;
-}
-
-#projects > ol > li > ul > li > a {
     display:flex;
     flex-direction: column;
     background-color: rgba(255,255,255,0.7);
     color:#000000;
     overflow: hidden;
-}
-
-#projects > ol > li > ul > li > a.highlight {
-    flex-direction: column;
 }
 
 #projects > ol > li > ul > li > a:hover {
@@ -203,7 +189,7 @@ section h2 {
     padding: 0.5em;
 }
 
-.project-caption > h4, .project-caption > p, #twitter a > p {
+.project-caption > h4, .project-caption > p {
     margin:0;
 }
 
@@ -220,32 +206,37 @@ section h2 {
     border-radius:1em;
 }
 
-#twitter {
-    padding:0 1em;
-}
-
-#twitter > a {
-    margin-top:1em;
-    padding:1em;
-    background-color: rgba(29, 161, 242,0.6);
-    color:#ffffff;
-}
-
-#twitter > a:hover {
-    background-color: rgba(29, 161, 242,0.8);
-}
-
-#twitter > a > h3 {
-    font-size: 2em;
-    margin-top:0;
-    margin-bottom:0.5em;
-}
-
-#whoisthis div {
+#hello {
     margin-top: 1em;
     background-color: rgba(0,0,100,0.5);
     padding: 0.5em 1em;
     border-radius: 0.5em;
+}
+
+#social {
+    padding:1em;
+}
+
+#social p {
+    margin-bottom:0;
+}
+
+.social-link {
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition:background-color 0.1s;
+}
+
+#twitter {
+    background-color:rgb(29, 161, 242);
+    color:#fff;
+}
+
+#twitter:hover {
+    background-color:rgb(26, 145, 218);
 }
 
 footer {
@@ -286,11 +277,6 @@ footer p {
 
     #projects > ol {
         padding:0;
-    }
-
-    #twitter > a {
-        padding:1em 2em;
-        display:inline-block;
     }
 }
 
