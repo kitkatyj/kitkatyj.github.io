@@ -213,6 +213,19 @@ section h2 {
     border-radius: 0.5em;
 }
 
+#hello img {
+    width:100%;
+    border-radius: 0.5em;
+}
+
+#hello .caption {
+    font-size: 0.5em;
+}
+
+#hello a {
+    color:rgb(29, 161, 242);
+}
+
 #social {
     padding:1em;
 }
