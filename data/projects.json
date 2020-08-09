@@ -1,6 +1,14 @@
 {
     "projects":[
         {
+            "title":"Starlax",
+            "description":"A lightweight HTML5 Canvas based parallax starfield javascript library",
+            "type":"web",
+            "link":"/starlax",
+            "year":2020,
+            "icon":"starlax.png"
+        },
+        {
             "title":"Apple 2",
             "description":"Apple interacts with her world",
             "type":"web",

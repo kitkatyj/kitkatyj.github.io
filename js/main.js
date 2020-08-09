@@ -1,21 +1,20 @@
-var canvas, ctx;
+var starlax;
 var resizeTimer;
-var starfield = [];
 var timer = 0;
 
 function init(){
     console.log('%c"Imagination will often carry us to worlds that never were. But without it we go nowhere." -Carl Sagan',"font-size:1.5em; font-style:italic; font-family:'Courier New',monospace; padding:0.5em 0; line-height:1.5;");
 
-    canvas = document.getElementById('stars-bg');
-    ctx = canvas.getContext('2d');
-
     $('#projects p').remove();
 
-    resizeReset(); resizePlanet();
+    starlax = new Starlax({
+        zPos:20,
+        zPosRandom:1
+    });
+
+    resizePlanet();
     window.addEventListener("resize",function(e){
         resizePlanet();
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(resizeReset,250);
     });
 
     $.get("data/projects.json",function(data){
@@ -38,8 +37,6 @@ function init(){
         },function(){
             $(this).animate({opacity:0.5},200);
         });
-
-    draw();
 }
 
 function loadProject(project){
@@ -101,61 +98,10 @@ function resizePlanet(){
     $('footer').css('height',(window.innerWidth >= 767) ? window.innerWidth / 8 : window.innerWidth * 2/3);
 }
 
-function resizeReset(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    setStarfield();
-}
-
-function setStarfield(){
-    starfield = [];
-    var qty = Math.floor(canvas.width/75 * canvas.height/75);
-
-    for(i = 0; i < qty; i++){
-
-        starfield.push({
-            "twinkleOffset":Math.random() * 2 * Math.PI,
-            "posX":Math.round(Math.random() * canvas.width),
-            "posY":Math.round(Math.random() * canvas.height),
-            "size":2+Math.floor(Math.random() * 3),
-            "zIndex":2+Math.floor(10*Math.random())
-        });
-    }
-    // console.log(starfield);
-}
-
-function draw(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-
-    ctx.fillStyle = "#000033";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
-
-    starfield.forEach(function(star){
-        ctx.beginPath();
-        ctx.arc(
-            star.posX,
-            mod((star.posY - window.pageYOffset/star.zIndex),canvas.height),
-            star.size,
-            0,2*Math.PI
-        );
-        ctx.globalAlpha = (0.5 + 0.5 * Math.sin((timer + star.twinkleOffset*20)/20)) * ((12 - star.zIndex)/12)*0.6;
-        ctx.fillStyle = "white";
-        ctx.fill();
-    });
-
-    timer++;
-    window.requestAnimationFrame(draw);
-}
-
 function scrollToSmooth(element){
     $('html, body').animate({
         scrollTop: $('#'+element).offset().top
     },1000);
-}
-
-function mod(n, m) {
-    return ((n % m) + m) % m;
 }
 
 window.onload = init;
