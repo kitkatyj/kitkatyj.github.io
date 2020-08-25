@@ -8,8 +8,9 @@ function init(){
     $('#projects p').remove();
 
     starlax = new Starlax({
-        zPos:20,
-        zPosRandom:1
+        zPos:10,
+        zPosRandom:1,
+        color:'#fff'
     });
 
     resizePlanet();
