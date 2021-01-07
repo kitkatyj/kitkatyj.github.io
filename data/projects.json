@@ -1,6 +1,14 @@
 {
     "projects":[
         {
+            "title":"Flurry's Part",
+            "description":"Music video collaboration",
+            "type":"vid",
+            "link":"https://youtu.be/trP1t8dSMg8",
+            "year":2021,
+            "icon":"flurry.jpg"
+        },
+        {
             "title":"Starlax",
             "description":"A lightweight HTML5 Canvas based parallax starfield javascript library",
             "type":"web",
@@ -10,7 +18,7 @@
         },
         {
             "title":"Apple 2",
-            "description":"Apple interacts with her world",
+            "description":"She interacts with her world",
             "type":"web",
             "link":"/apple-project2",
             "year":2020,
@@ -27,7 +35,7 @@
         },
         {
             "title":"Apple",
-            "description":"Apple walks around",
+            "description":"She walks around",
             "type":"web",
             "link":"/apple-project",
             "year":2018,
@@ -50,17 +58,17 @@
             "icon":"graph.svg"
         },
         {
-            "title":"GovTech's Data Viz Video Challenge 2017",
+            "title":"Inaugural GovTech Data Viz Video Challenge",
             "subtitle":"Top Prize",
             "description":"",
             "type":"vid",
-            "link":"https://youtu.be/IHwdncZK8HE",
+            "link":"http://str.sg/498z",
             "year":2017,
             "preview":"dataviz.jpg"
         },
         {
-            "title":"\"A New Pair of Wings\" Music Video",
-            "description":"",
+            "title":"A New Pair of Wings",
+            "description":"Music video collaboration",
             "type":"vid",
             "link":"https://youtu.be/zh4v5DTZYxY",
             "year":2017,
@@ -83,8 +91,8 @@
             "icon":"sandbox.svg"
         },
         {
-            "title":"\"The Cloudsdale Splash\" Launch Trailer",
-            "description":"",
+            "title":"The Cloudsdale Splash",
+            "description":"Launch video",
             "type":"vid",
             "link":"https://youtu.be/qer6LfDwvMY",
             "year":2014,
