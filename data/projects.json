@@ -1,6 +1,14 @@
 {
     "projects":[
         {
+            "title":"BOOPS",
+            "description":"Bunch Of Online Physics Simulations",
+            "type":"web",
+            "link":"/boops",
+            "year":2021,
+            "icon":"boops.svg"
+        },
+        {
             "title":"Flurry's Part",
             "description":"Music video collaboration",
             "type":"vid",
@@ -17,8 +25,8 @@
             "icon":"starlax.png"
         },
         {
-            "title":"Apple 2",
-            "description":"She interacts with her world",
+            "title":"Apple Project",
+            "description":"She interacts with her world.",
             "type":"web",
             "link":"/apple-project2",
             "year":2020,
@@ -32,14 +40,6 @@
             "link":"/lurdball-project",
             "year":2018,
             "icon":"lurdball.svg"
-        },
-        {
-            "title":"Apple",
-            "description":"She walks around",
-            "type":"web",
-            "link":"/apple-project",
-            "year":2018,
-            "icon":"apple.png"
         },
         {
             "title":"BFDI Votes",

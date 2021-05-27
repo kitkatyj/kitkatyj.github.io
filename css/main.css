@@ -44,10 +44,10 @@ header, section {
 
 header {
     height:100vh;
+    height: -webkit-fill-available;
     display:flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 4em;
 }
 
 section {
@@ -90,7 +90,6 @@ div.character {
 
 #pistachio {
     background-image: url(../img/pistachio.svg);
-
     width:100px;
     height:150px;
     right:10vw;
@@ -101,7 +100,6 @@ div.character {
 
 #spacepony {
     background-image: url(../img/kosmos.svg);
-
     width:150px;
     height:200px;
     left:10vw;
@@ -117,6 +115,7 @@ div.character {
     align-items: center;
     color:#ffffff;
     white-space: nowrap;
+    padding:2em;
 }
 
 #scrollDown p {
@@ -328,5 +327,9 @@ footer p {
     header {
         padding-top:2em;
         padding-bottom: 1em;
+    }
+
+    #scrollDown {
+        display:none;
     }
 }
