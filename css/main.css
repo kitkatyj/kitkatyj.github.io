@@ -278,6 +278,10 @@ footer p {
         margin-bottom: 10vh;
     }
 
+    header {
+        height:100vh;
+    }
+
     header h1 {
         font-size: 4em;
     }
