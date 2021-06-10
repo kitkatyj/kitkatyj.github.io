@@ -22,6 +22,61 @@ body {
     background-size: contain;
 }
 
+#nav {
+    position: fixed;
+    z-index: 99;
+    width:100%;
+}
+
+#nav ul {
+    padding:0;
+    list-style: none;
+    margin:0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#nav ul a {
+    color:inherit;
+    padding:0.5em 1em;
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+#nav ul li {
+    border-top:none;
+    border-right:4px solid rgba(255,255,255,0);
+    background-color:#000022;
+    transition: border-top 0.2s,border-right 0.2s;
+}
+
+#nav ul li:hover {
+    border-right:4px solid rgba(255,255,255,0.5);
+}
+#nav ul li.active {
+    border-right:4px solid rgba(255,255,255,1);
+}
+
+#nav ul a i{
+    font-size: 0.75em;
+    padding-left:0.6em;
+}
+
+#nav ul li.hamburger i {padding:0; font-size: 1em;}
+
+#nav ul li.hamburger {
+    position: absolute; top:0; left:0;
+    background:none;
+    user-select: none;
+    border-bottom-right-radius: 1em;
+}
+
+#nav ul li.hamburger:hover {
+    background-color:#fff;
+    color:#000033;
+}
+
 #main {
     margin:0 auto;
     width:480px;
@@ -108,23 +163,13 @@ div.character {
     animation: float 2s ease-in-out -0.5s infinite;
 }
 
-#scrollDown {
-    align-self: center;
-    display:flex;
-    text-decoration: none;
-    align-items: center;
-    color:#ffffff;
-    white-space: nowrap;
-    padding:2em;
-}
-
-#scrollDown p {
-    margin:0;
-}
-
 section h2 {
     margin: 0;
     padding-top:1em;
+}
+
+section h3 {
+    margin:0.25em 0;
 }
 
 #projects > ol, #projects > ol > li > ul {
@@ -205,8 +250,11 @@ section h2 {
     border-radius:1em;
 }
 
-#hello {
+#about > div {
     margin-top: 1em;
+}
+
+#hello, #email-bubble {
     background-color: rgba(0,0,100,0.5);
     padding: 0.5em 1em;
     border-radius: 0.5em;
@@ -241,7 +289,7 @@ section h2 {
     flex:1;
     margin:0.5em;
     padding: 0.5em;
-    border-radius: 0.25em;
+    border-radius: 0.5em;
     font-weight: bold;
     text-decoration: none;
     background-color:#000; color:#fff;
@@ -269,6 +317,15 @@ footer p {
     margin:0;
 }
 
+@media screen and (max-width: 767px) {
+    #nav.closed ul li:not(:first-child) {
+        display:none;
+    };
+    #nav ul li:not(:first-child) {
+        display:block;
+    };
+}
+
 @media screen and (min-width: 767px) {
     body {
         background-image: url(../img/planet-desktop.svg);
@@ -285,6 +342,32 @@ footer p {
     header h1 {
         font-size: 4em;
     }
+
+    #nav ul {
+        display:inline-flex;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+        overflow: hidden;
+    }
+
+    #nav ul li.hamburger {
+        display:none;
+    }
+    #nav ul li{
+        border-right:none;
+        border-top:4px solid rgba(255,255,255,0);
+    }
+    #nav ul li:hover {
+        border-right:none;
+        border-top:4px solid rgba(255,255,255,0.5);
+    }
+    #nav ul li.active {
+        border-right:none;
+        border-top:4px solid rgba(255,255,255,1);
+    }
+    
+    #nav ul a {flex-direction: row;}
+    #nav ul a i{padding-right:0.6em; padding-left:0;}
 
     #pistachio {    
         width:150px;
@@ -305,7 +388,7 @@ footer p {
 
 @media screen and (min-width: 992px),(orientation:landscape) {
     header {
-        padding-top:6em;
+        padding-top:3em;
     }
 
     #characters {

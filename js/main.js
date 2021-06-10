@@ -23,21 +23,13 @@ function init(){
         data.projects.forEach(function(project){
             loadProject(project);
         });
+    }).done(function(){
+        $("#nav").scrollspy({ offset: -$("#nav").height() ,animate:true });
     });
 
-    $('header').append('<a id="scrollDown"><i class="fas fa-arrow-alt-circle-down"></i><p>&nbsp; Scroll to continue</p></a>');
-    $('#scrollDown').css({opacity:0})
-        .delay(2500).animate({opacity:0.5},function(){
-            $(this).attr({
-                href:"#downwego",
-                onclick:"scrollToSmooth('projects')"
-            });
-        })
-        .hover(function(){
-            $(this).animate({opacity:1},200);
-        },function(){
-            $(this).animate({opacity:0.5},200);
-        });
+    $("#nav li.hamburger").click(function(){
+        $("#nav").toggleClass("closed");
+    });
 }
 
 function loadProject(project){

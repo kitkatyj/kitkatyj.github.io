@@ -24,11 +24,20 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/starlax.js"></script>
+    <script src="js/scrollspy.min.js"></script>
     <script src="js/main.js"></script>
     <title>kitkatyj</title>
 </head>
     <body>
-        <header>
+        <nav id="nav" class="closed">
+            <ul>
+                <li class="hamburger"><a onclick=""><i class="fas fa-bars"></i></a></li>
+                <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#projects"><i class="fas fa-star"></i>Explore</a></li>
+                <li><a href="#about"><i class="fas fa-grin"></i>Who is this?</a></li>
+            </ul>
+        </nav>
+        <header id="home">
             <div id="banner">
                 <div id="titles">
                     <h1>kitkatyj</h1>
@@ -44,22 +53,22 @@
             <h2>Explore</h2>
             <p>Please enable javascript to view projects.</p>
         </section>
-        <section id="whoisthis">
+        <section id="about">
             <h2>Who is this?</h2>
             <div id="hello">
                 <img src="img/kat_airbrush-transp.png" alt="Kat YJ portrait">
                 <p>Hello!</p>
-                <p>The name's <strong>Kat Yong Jie / 阙永杰</strong> from Singapore 🇸🇬.</p>
+                <p>The name's <strong>Kat Yong Jie / 阙永杰</strong><br><strong>(he / they)</strong> from Singapore 🇸🇬 .</p>
                 <p>I'm a video editor, web developer and designer, who dabbles in animation and motion graphics.</p>
                 <p>I let my work speak for itself and hope to let it speak for all of us.</p>
                 <p class="caption">Portrait by Ryan Noble <a href="https://twitter.com/electrochoc_">@electrochoc_</a></p>
             </div>
             <div id="social" class="bubble">
+                <h3>Follow me, I guess</h3>
                 <div>
                     <a class="social-link" href="https://twitter.com/kitkatyj" id="twitter"><span class="fab fa-twitter"></span><span>Twitter</span></a>
                     <a class="social-link" href="https://github.com/kitkatyj" id="github"><span class="fab fa-github"></span><span>Github</span></a>
                 </div>
-                <p>Follow me, I guess.</p>
             </div>
         </section>
         <footer><p>Copyright &copy; kitkatyj 2017 - 2021.</p></footer>
