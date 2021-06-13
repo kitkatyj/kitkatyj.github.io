@@ -1,11 +1,12 @@
 var starlax;
 var resizeTimer;
 var timer = 0;
+var checkedCategories = [];
 
 function init(){
     console.log('%c"Imagination will often carry us to worlds that never were. But without it we go nowhere." -Carl Sagan',"font-size:1.5em; font-style:italic; font-family:'Courier New',monospace; padding:0.5em 0; line-height:1.5;");
 
-    $('#projects p').remove();
+    $('#projects > p').remove();
 
     starlax = new Starlax({
         zPos:10,
@@ -17,18 +18,61 @@ function init(){
     window.addEventListener("resize",function(e){
         resizePlanet();
     });
+    
+    var categoryLabels = $("#projects > form > label > input");
+
+    for(var i = 0; i < categoryLabels.length; i++){
+        checkedCategories.push(categoryLabels.get(i).id.split("-")[0]);
+        if(categoryLabels.get(i).checked){
+            $(categoryLabels.parent().get(i)).addClass("checked");
+        }
+    }
 
     $.get("data/projects.json",function(data){
         $('#projects').append($('<ol></ol>'));
         data.projects.forEach(function(project){
-            loadProject(project);
+            if($.inArray(project.type, checkedCategories) !== -1){
+                loadProject(project);
+            }
         });
     }).done(function(){
         $("#nav").scrollspy({ offset: -$("#nav").height() ,animate:true });
     });
 
+    $("#nav").css({top:-$("#nav").height()}).delay(1000).animate({top:0},500);
     $("#nav li.hamburger").click(function(){
         $("#nav").toggleClass("closed");
+    });
+
+    $("#projects > form > label > input").change(function(){
+        if($(this).get(0).checked){
+            $(this).parent().addClass("checked");
+        } else {
+            $(this).parent().removeClass("checked");
+        }
+        reloadProjectList();
+    });
+}
+
+function reloadProjectList(){
+    $('#projects > ol').remove();
+    checkedCategories = [];
+
+    var categoryLabels = $("#projects > form > label > input:checked");
+
+    for(var i = 0; i < categoryLabels.length; i++){
+        checkedCategories.push(categoryLabels.get(i).id.split("-")[0]);
+    }
+
+    $.get("data/projects.json",function(data){
+        $('#projects').append($('<ol></ol>'));
+        data.projects.forEach(function(project){
+            if($.inArray(project.type, checkedCategories) !== -1){
+                loadProject(project);
+            }
+        });
+    }).done(function(){
+        $("#nav").scrollspy({ offset: -$("#nav").height()});
     });
 }
 
@@ -89,12 +133,6 @@ function loadProject(project){
 
 function resizePlanet(){
     $('footer').css('height',(window.innerWidth >= 767) ? window.innerWidth / 8 : window.innerWidth * 2/3);
-}
-
-function scrollToSmooth(element){
-    $('html, body').animate({
-        scrollTop: $('#'+element).offset().top
-    },1000);
 }
 
 window.onload = init;

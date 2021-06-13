@@ -4,6 +4,31 @@
     100% {background-position: center 0px;}
 }
 
+input[type=checkbox] {
+    width:1.5em; height:1.5em;
+    border-radius: 6px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background-color:#666;
+}
+
+input[type=checkbox]:checked {
+    background-color: #000;
+}
+
+input[type=checkbox]:checked::after {
+    content: '\2713';
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: block;
+    width:inherit; height: inherit;
+    text-align: center;
+    line-height: 0.9;
+}
+
 html {
     font-family: oscine,Helvetica, Arial, sans-serif;
     background-color:#000033;
@@ -67,14 +92,15 @@ body {
 
 #nav ul li.hamburger {
     position: absolute; top:0; left:0;
-    background:none;
     user-select: none;
     border-bottom-right-radius: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 #nav ul li.hamburger:hover {
     background-color:#fff;
     color:#000033;
+    border-right:inherit;
 }
 
 #main {
@@ -172,6 +198,43 @@ section h3 {
     margin:0.25em 0;
 }
 
+#projects > form {
+    display: flex;
+    justify-content: center;
+    gap:0.5em;
+}
+
+#projects > form > label {
+    display: flex;
+    align-items: center;
+    padding:0.25em 0.5em;
+    column-gap: 8px;
+    background-color: #222;
+    color:#fff;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+#projects > form > label:active {
+    transform: scale(0.95);
+}
+
+#projects > form > label.checked {
+    color:#222;
+}
+
+#projects > form > label.checked {
+    background-color: #fff;
+    color: #222;
+}
+#projects > form > label.checked:hover {
+    background-color: #ddd;
+}
+
+#projects > form > label[for=web-cb].checked i {color:#007de4;}
+#projects > form > label[for=vid-cb].checked i {color:#10be00;}
+
 #projects > ol, #projects > ol > li > ul {
     list-style: none;
     padding:0;
@@ -250,11 +313,11 @@ section h3 {
     border-radius:1em;
 }
 
-#about > div {
+#about > div, #projects > form {
     margin-top: 1em;
 }
 
-#hello, #email-bubble {
+.bubble2 {
     background-color: rgba(0,0,100,0.5);
     padding: 0.5em 1em;
     border-radius: 0.5em;
