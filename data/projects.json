@@ -6,7 +6,8 @@
             "type":"web",
             "link":"/boops",
             "year":2021,
-            "icon":"boops.svg"
+            "icon":"boops.svg",
+            "iconAlt":"Two particles with arrows pointing at each other as if they are about to physically collide."
         },
         {
             "title":"Flurry's Part",
@@ -14,7 +15,8 @@
             "type":"vid",
             "link":"https://youtu.be/trP1t8dSMg8",
             "year":2021,
-            "icon":"flurry.jpg"
+            "icon":"flurry.jpg",
+            "iconAlt":"My Little Pony's Flurry Heart all grown up styled and zooming through a colorful starfield."
         },
         {
             "title":"Starlax",
@@ -22,7 +24,8 @@
             "type":"web",
             "link":"/starlax",
             "year":2020,
-            "icon":"starlax.png"
+            "icon":"starlax.png",
+            "iconAlt":"A starfield with a colored background."
         },
         {
             "title":"Apple Project",
@@ -31,7 +34,9 @@
             "link":"/apple-project2",
             "year":2020,
             "icon":"apple2.png",
-            "preview":"apple2-preview.png"
+            "iconAlt":"A white apple with a blue bow tie.",
+            "preview":"apple2-preview.png",
+            "previewAlt":"A little girl named Apple and an angel-like character Clementine in a pixel grass field."
         },
         {
             "title":"Lurdball",
@@ -39,7 +44,8 @@
             "type":"web",
             "link":"/lurdball-project",
             "year":2018,
-            "icon":"lurdball.svg"
+            "icon":"lurdball.svg",
+            "iconAlt":"A ball with arrows pointing in the four directions."
         },
         {
             "title":"BFDI Votes",
@@ -47,7 +53,8 @@
             "type":"web",
             "link":"/bfdivotes",
             "year":2017,
-            "icon":"bfdivotes.svg"
+            "icon":"bfdivotes.svg",
+            "iconAlt":"Battle for Dream Island's Speaker Box against a bar chart."
         },
         {
             "title":"Graph Transformer",
@@ -55,7 +62,8 @@
             "type":"web",
             "link":"/graphtransformer",
             "year":2017,
-            "icon":"graph.svg"
+            "icon":"graph.svg",
+            "iconAlt":"A concave parabola intersecting a positive straight line."
         },
         {
             "title":"Inaugural GovTech Data Viz Video Challenge",
@@ -64,7 +72,8 @@
             "type":"vid",
             "link":"http://str.sg/498z",
             "year":2017,
-            "preview":"dataviz.jpg"
+            "preview":"dataviz.jpg",
+            "previewAlt":"A cartoon representation of Singapore's skyline with an energy meter reading 6.39 gigawatts at 3pm."
         },
         {
             "title":"A New Pair of Wings",
@@ -72,7 +81,8 @@
             "type":"vid",
             "link":"https://youtu.be/zh4v5DTZYxY",
             "year":2017,
-            "icon":"anpow.jpg"
+            "icon":"anpow.jpg",
+            "iconAlt":"My Little Pony's Starlight Glimmer with glowing wings."
         },
         {
             "title":"Space Unicorn Explores the Solar System",
@@ -80,7 +90,8 @@
             "type":"web",
             "link":"/spaceunicorn-solarsystem",
             "year":2017,
-            "icon":"spaceunicorn.svg"
+            "icon":"spaceunicorn.svg",
+            "iconAlt":"A space unicorn with a green coat, blue mane and astronaut helmet."
         },
         {
             "title":"Sandbox Elements",
@@ -88,7 +99,8 @@
             "type":"web",
             "link":"/sandbox",
             "year":2016,
-            "icon":"sandbox.svg"
+            "icon":"sandbox.svg",
+            "iconAlt":"Five icons representing elements of Fire, Earth, Water, Air and Energy."
         },
         {
             "title":"The Cloudsdale Splash",
@@ -96,7 +108,8 @@
             "type":"vid",
             "link":"https://youtu.be/qer6LfDwvMY",
             "year":2014,
-            "icon":"cloudsdale.svg"
+            "icon":"cloudsdale.svg",
+            "iconAlt":"An icon of a cloud with blue, yellow and red lightning bolts coming out."
         }
     ]
 }

@@ -39,7 +39,6 @@ function init(){
         $("#nav").scrollspy({ offset: -$("#nav").height() ,animate:true });
     });
 
-    $("#nav").css({top:-$("#nav").height()}).delay(1000).animate({top:0},500);
     $("#nav li.hamburger").click(function(){
         $("#nav").toggleClass("closed");
     });
@@ -91,7 +90,7 @@ function loadProject(project){
         var projectPreviewHold = $('<div class="preview-hold"></div>');
         projectLink.append(projectPreviewHold);
 
-        var projectPreview = $('<img src="img/'+project.preview+'">');
+        var projectPreview = (project.previewAlt && project.previewAlt.length > 0) ? $('<img src="img/'+project.preview+'" alt="'+project.previewAlt+'">') : $('<img src="img/'+project.preview+'">');
         projectPreviewHold.append(projectPreview);
     }
 
@@ -102,7 +101,7 @@ function loadProject(project){
         var projectImgHold = $('<div class="icon-hold"></div>');
         projectCaptionHold.append(projectImgHold);
 
-        var projectIcon = $('<img src="img/'+project.icon+'">');
+        var projectIcon = (project.iconAlt && project.iconAlt.length > 0) ? $('<img src="img/'+project.icon+'" alt="'+project.iconAlt+'">') : $('<img src="img/'+project.icon+'">');
         projectImgHold.append(projectIcon);
     }
 
