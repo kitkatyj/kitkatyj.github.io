@@ -337,47 +337,49 @@ section h3 {
 }
 
 #social {
-    padding:0.5em;
-}
-
-#social p {
-    margin:0.25em;
-}
-
-#social > div {
     display: flex;
+    gap:1em;
+    padding:0.5em 0;
 }
 
-.social-link {
+#social  a.social-link {
     flex:1;
-    margin:0.5em;
     padding: 0.5em;
     border-radius: 0.5em;
     font-weight: bold;
     text-decoration: none;
-    background-color:#000; color:#fff;
-    transition:background-color 0.1s;
+    color:#fff;
+    border:1px solid #fff;
+    transition:background-color 0.2s;
 }
 
-.social-link span {
+#social .social-link span {
     margin:0 0.25em;
 }
-
-#twitter {background-color:rgb(29, 161, 242);}
-#twitter:hover {background-color:rgb(26, 145, 218);}
-
-#github {background-color:#24292e;}
-#github:hover {background-color:#000;}
 
 footer {
     padding:1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
 }
 
 footer p {
     margin:0;
+}
+
+#btt {
+    padding:0.5em 1em;
+    margin-bottom: 1em;
+    cursor:pointer;
+    border-radius: 0.5em;
+    transition:background-color 0.2s;
+}
+
+#social  a.social-link:hover, #btt:hover {
+    background-color: #fff;
+    color: #000033;
 }
 
 @media screen and (max-width: 767px) {

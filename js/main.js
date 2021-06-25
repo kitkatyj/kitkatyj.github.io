@@ -39,9 +39,9 @@ function init(){
         $("#nav").scrollspy({ offset: -$("#nav").height() ,animate:true });
     });
 
-    $("#nav li.hamburger").click(function(){
-        $("#nav").toggleClass("closed");
-    });
+    $("#nav li.hamburger").click(function(){$("#nav").toggleClass("closed");});
+    $("#nav a[href]").click(function(){$("#nav").addClass("closed");});
+    $("#btt").click(function(){scrollToSmooth("home");});
 
     $("#projects > form > label > input").change(function(){
         if($(this).get(0).checked){
@@ -132,6 +132,12 @@ function loadProject(project){
 
 function resizePlanet(){
     $('footer').css('height',(window.innerWidth >= 767) ? window.innerWidth / 8 : window.innerWidth * 2/3);
+}
+
+function scrollToSmooth(element){
+    $('html, body').animate({
+        scrollTop: $('#'+element).offset().top
+    },1500);
 }
 
 window.onload = init;
