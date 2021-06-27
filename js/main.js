@@ -41,7 +41,6 @@ function init(){
 
     $("#nav li.hamburger").click(function(){$("#nav").toggleClass("closed");});
     $("#nav a[href]").click(function(){$("#nav").addClass("closed");});
-    $("#btt").click(function(){scrollToSmooth("home");});
 
     $("#projects > form > label > input").change(function(){
         if($(this).get(0).checked){

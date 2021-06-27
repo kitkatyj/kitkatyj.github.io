@@ -369,15 +369,7 @@ footer p {
     margin:0;
 }
 
-#btt {
-    padding:0.5em 1em;
-    margin-bottom: 1em;
-    cursor:pointer;
-    border-radius: 0.5em;
-    transition:background-color 0.2s;
-}
-
-#social  a.social-link:hover, #btt:hover {
+#social  a.social-link:hover {
     background-color: #fff;
     color: #000033;
 }
