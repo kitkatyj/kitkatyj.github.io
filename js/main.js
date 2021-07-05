@@ -140,7 +140,7 @@ function scrollToSmooth(element){
 }
 
 function dorkAttack(){
-    alert("Emergency Alert! Giant horse attack in your region. Please remain calm and prepare your to meet your demise.");
+    confirm("Emergency Alert! Giant horse attack in your region. Please remain calm and prepare to meet your demise.");
 }
 
 window.onload = init;
