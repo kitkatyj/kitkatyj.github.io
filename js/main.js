@@ -139,4 +139,8 @@ function scrollToSmooth(element){
     },1500);
 }
 
+function dorkAttack(){
+    alert("Emergency Alert! Giant horse attack in your region. Please remain calm and prepare your to meet your demise.");
+}
+
 window.onload = init;
