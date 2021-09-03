@@ -1,6 +1,17 @@
 {
     "projects":[
         {
+            "title":"N-Body Music Box",
+            "description":"Making music gravitationally.",
+            "type":"web",
+            "link":"https://boops-c3119.web.app",
+            "year":2021,
+            "icon":"nbody.svg",
+            "iconAlt":"Three particles drawing a shape of a treble clef.",
+            "preview":"nbody-preview.png",
+            "previewAlt":"A treble clef next to three gravitationally attracting particles."
+        },
+        {
             "title":"This is Charcoal",
             "description":"Animated music video - katyj98",
             "type":"vid",
@@ -38,7 +49,7 @@
         },
         {
             "title":"Apple Project",
-            "description":"She interacts with her world.",
+            "description":"An RPG concept and experiment.",
             "type":"web",
             "link":"/apple-project2",
             "year":2020,
