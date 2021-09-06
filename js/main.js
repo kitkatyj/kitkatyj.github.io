@@ -50,6 +50,8 @@ function init(){
         }
         reloadProjectList();
     });
+
+    $('footer').html("<p>Copyright &copy; kitkatyj 2017 - "+new Date().getFullYear()+"</p>")
 }
 
 function reloadProjectList(){
