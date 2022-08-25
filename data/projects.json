@@ -1,6 +1,15 @@
 {
     "projects":[
         {
+            "title":"This is Bismuth",
+            "description":"An original animated collaborative music video",
+            "type":"vid",
+            "link":"https://youtu.be/ELZ6ob7RI0I",
+            "year":2022,
+            "preview":"bismuth.jpg",
+            "previewAlt":"An anthropomorphic Bismuth crystal holds a microphone while standing on a rainbow and being surrounded by symbols of her passions in science and art."
+        },
+        {
             "title":"N-Body Music Box",
             "description":"Making music gravitationally.",
             "type":"web",

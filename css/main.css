@@ -29,6 +29,27 @@ input[type=checkbox]:checked::after {
     line-height: 0.9;
 }
 
+a {
+    color:rgb(29, 161, 242);
+}
+
+.bubble-btn {
+    flex:1;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color:#fff;
+    background-color:#000033;
+    transition:background-color 0.1s;
+    cursor: pointer;
+}
+
+.bubble-btn:hover, .bubble-btn.hold {
+    background-color: #fff;
+    color: #000033;
+}
+
 html {
     font-family: oscine,Helvetica, Arial, sans-serif;
     background-color:#000033;
@@ -312,7 +333,7 @@ section h3 {
     border-radius:1em;
 }
 
-#about > div, #projects > form {
+.bubble2, #projects > form {
     margin-top: 1em;
 }
 
@@ -331,26 +352,11 @@ section h3 {
     font-size: 0.5em;
 }
 
-#hello a {
-    color:rgb(29, 161, 242);
-}
-
 #social {
     display: flex;
     flex-wrap: wrap;
     gap:1em;
     padding:0.5em 0;
-}
-
-#social  a.social-link {
-    flex:1;
-    padding: 0.5em;
-    border-radius: 0.5em;
-    font-weight: bold;
-    text-decoration: none;
-    color:#fff;
-    background-color:#000033;
-    transition:background-color 0.1s;
 }
 
 #social  a.social-link.full-width {
@@ -371,11 +377,6 @@ footer {
 
 footer p {
     margin:0;
-}
-
-#social  a.social-link:hover {
-    background-color: #fff;
-    color: #000033;
 }
 
 @media screen and (max-width: 767px) {
