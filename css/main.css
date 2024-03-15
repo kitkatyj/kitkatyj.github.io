@@ -346,6 +346,7 @@ section h3 {
 #hello img {
     width:100%;
     border-radius: 0.5em;
+    margin-top: 0.5em;
 }
 
 #hello .caption {

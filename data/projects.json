@@ -1,6 +1,15 @@
 {
     "projects":[
         {
+            "title":"This is Scrapbook",
+            "description":"An original animated collaborative story-driven project",
+            "type":"vid",
+            "link":"https://www.youtube.com/playlist?list=PLTdpquZpe_Cq5FhcrI9uF4p9-wV2UQaVl",
+            "year":2024,
+            "icon":"scrapbook.jpg",
+            "iconAlt":"An anthropomorphic scrapbook gives a gazed awe look towards the right."
+        },
+        {
             "title":"This is Bismuth",
             "description":"An original animated collaborative music video",
             "type":"vid",
@@ -42,7 +51,7 @@
             "title":"Flurry's Part",
             "description":"Animated music video - daspacepony",
             "type":"vid",
-            "link":"https://youtu.be/trP1t8dSMg8",
+            "link":"https://youtu.be/xI_1dnpO_i8",
             "year":2021,
             "icon":"flurry.jpg",
             "iconAlt":"My Little Pony's Flurry Heart all grown up styled and zooming through a colorful starfield."
@@ -58,7 +67,7 @@
         },
         {
             "title":"Apple Project",
-            "description":"An RPG concept and experiment.",
+            "description":"An RPG concept and experiment",
             "type":"web",
             "link":"/apple-project2",
             "year":2020,
@@ -69,7 +78,7 @@
         },
         {
             "title":"Lurdball",
-            "description":"Left Up Right Down (LURD) Ball",
+            "description":"Left Up Right Down (LURD) Ball game concept",
             "type":"web",
             "link":"/lurdball-project",
             "year":2018,
@@ -108,7 +117,7 @@
             "title":"A New Pair of Wings",
             "description":"Animated music video - daspacepony",
             "type":"vid",
-            "link":"https://youtu.be/zh4v5DTZYxY",
+            "link":"https://youtu.be/kequxogAIf8",
             "year":2017,
             "icon":"anpow.jpg",
             "iconAlt":"My Little Pony's Starlight Glimmer with glowing wings."
