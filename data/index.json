@@ -1,0 +1,107 @@
+{
+	"web": {
+		"nbody": {
+			"title": "N-Body Music Box",
+			"description": "Making music gravitationally.",
+			"icon": "nbody.svg",
+			"iconAlt": "Three particles drawing a shape of a treble clef.",
+			"preview": "nbody-preview.png",
+			"previewAlt": "A treble clef next to three gravitationally attracting particles."
+		},
+		"starlax": {
+			"title": "Starlax",
+			"description": "A lightweight HTML5 Canvas based parallax starfield javascript library",
+			"icon": "starlax.png",
+			"iconAlt": "A starfield with a colored background."
+		},
+		"graph-transformer": {
+			"title": "Graph Transformer",
+			"description": "Get to know the workings of quadratic equations.",
+			"icon": "graph.svg",
+			"iconAlt": "A concave parabola intersecting a positive straight line."
+		},
+		"boops": {
+			"title": "BOOPS",
+			"description": "Bunch Of Online Physics Simulations",
+			"icon": "boops.svg",
+			"iconAlt": "Two particles with arrows pointing at each other as if they are about to physically collide."
+		},
+		"apple-project": {
+			"title": "Apple Project",
+			"description": "An RPG concept and experiment",
+			"icon": "apple2.png",
+			"iconAlt": "A white apple with a blue bow tie.",
+			"preview": "apple2-preview.png",
+			"previewAlt": "A little girl named Apple and an angel-like character Clementine in a pixel grass field."
+		},
+		"lurdball": {
+			"title": "Lurdball",
+			"description": "Left Up Right Down (LURD) Ball game concept",
+			"icon": "lurdball.svg",
+			"iconAlt": "A ball with arrows pointing in the four directions."
+		},
+		"bfdi-votes": {
+			"title": "BFDI Votes",
+			"description": "Infographic of votes from the web series Battle for Dream Island.",
+			"icon": "bfdivotes.svg",
+			"iconAlt": "Battle for Dream Island's Speaker Box against a bar chart."
+		},
+		"space-unicorn": {
+			"title": "Space Unicorn Explores the Solar System",
+			"description": "",
+			"icon": "spaceunicorn.svg",
+			"iconAlt": "A space unicorn with a green coat, blue mane and astronaut helmet."
+		},
+		"sandbox-elements": {
+			"title": "Sandbox Elements",
+			"description": "Mix and match elements and name them!",
+			"icon": "sandbox.svg",
+			"iconAlt": "Five icons representing elements of Fire, Earth, Water, Air and Energy."
+		}
+	},
+	"video": {
+		"scrapbook": {
+			"title": "This is Scrapbook",
+			"description": "An original animated collaborative story-driven project",
+			"preview": "scrapbook.jpg",
+			"previewAlt": "An anthropomorphic scrapbook gives a gazed awe look towards the right."
+		},
+		"govtech-dataviz": {
+			"title": "Inaugural GovTech Data Viz Video Challenge",
+			"subtitle": "Top Prize",
+			"description": "",
+			"preview": "dataviz.jpg",
+			"previewAlt": "A cartoon representation of Singapore's skyline with an energy meter reading 6.39 gigawatts at 3pm."
+		},
+		"anpow": {
+			"title": "A New Pair of Wings",
+			"description": "Animated music video - daspacepony",
+			"icon": "anpow.jpg",
+			"iconAlt": "My Little Pony's Starlight Glimmer with glowing wings."
+		},
+		"bismuth": {
+			"title": "This is Bismuth",
+			"description": "An original animated collaborative music video",
+			"icon": "bismuth.jpg",
+			"iconAlt": "An anthropomorphic Bismuth crystal holds a microphone while standing on a rainbow and being surrounded by symbols of her passions in science and art."
+		},
+		"charcoal": {
+			"title": "This is Charcoal",
+			"description": "Animated music video",
+			"icon": "charcoal.jpg",
+			"iconAlt": "An anthropomorphic block of charcoal hugs a piece of paper drawn with a heart."
+		},
+		"flurrys-part": {
+			"title": "Flurry's Part",
+			"description": "Animated music video",
+			"icon": "flurry.jpg",
+			"iconAlt": "My Little Pony's Flurry Heart all grown up styled and zooming through a colorful starfield."
+		},
+		"cloudsdale": {
+			"title": "The Cloudsdale Splash",
+			"description": "Launch video",
+			"icon": "cloudsdale.svg",
+			"iconAlt": "An icon of a cloud with blue, yellow and red lightning bolts coming out."
+		}
+	}
+}
