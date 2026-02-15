@@ -2,7 +2,6 @@ var starlax;
 var resizeTimer;
 var copyTimer;
 var timer = 0;
-var checkedCategories = [];
 let DATA = {};
 let showAllValue = {};
 
@@ -24,26 +23,6 @@ function init() {
 	window.addEventListener("resize", function (e) {
 		resizePlanet();
 	});
-
-	var categoryLabels = $("#projects > form > label > input");
-
-	// for (var i = 0; i < categoryLabels.length; i++) {
-	// 	checkedCategories.push(categoryLabels.get(i).id.split("-")[0]);
-	// 	if (categoryLabels.get(i).checked) {
-	// 		$(categoryLabels.parent().get(i)).addClass("checked");
-	// 	}
-	// }
-
-	// $.get("data/projects.json", function (data) {
-	// 	$("#projects").append($("<ol></ol>"));
-	// 	data.projects.forEach(function (project) {
-	// 		if ($.inArray(project.type, checkedCategories) !== -1) {
-	// 			loadProject(project);
-	// 		}
-	// 	});
-	// }).done(function () {
-	// 	$("#nav").scrollspy({ offset: -$("#nav").height(), animate: true });
-	// });
 
 	$.get("data/index.json", function (data) {
 		DATA = data;
