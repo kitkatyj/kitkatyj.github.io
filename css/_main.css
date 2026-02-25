@@ -61,27 +61,29 @@ a {
 }
 
 html {
-	font-family: oscine, Helvetica, Arial, sans-serif;
+	font-family: "Atkinson Hyperlegible Next", Helvetica, Arial, sans-serif;
 	background-color: #000033;
+}
+
+h1,
+h2,
+h3,
+h4,
+#nav,
+#social {
+	font-family: oscine, Helvetica, Arial, sans-serif;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	text-align: center;
-	font-size: 1.5em;
 	color: #fff;
 
+	min-height: 100vh;
 	background-image: url(../img/planet-mobile.svg);
 	background-position: bottom;
 	background-repeat: no-repeat;
 	background-size: contain;
-}
-
-#nav {
-	position: fixed;
-	z-index: 99;
-	width: 100%;
 }
 
 #nav ul {
@@ -97,7 +99,6 @@ body {
 	text-decoration: none;
 	display: flex;
 	align-items: center;
-	flex-direction: row-reverse;
 }
 
 #nav ul li {
@@ -114,11 +115,6 @@ body {
 }
 #nav ul li.active {
 	border-right: 4px solid rgba(255, 255, 255, 1);
-}
-
-#nav ul a i {
-	font-size: 0.75em;
-	padding-left: 0.6em;
 }
 
 #nav ul li.hamburger i {
@@ -154,26 +150,6 @@ canvas {
 	top: 0;
 	left: 0;
 	z-index: -1;
-}
-
-header,
-section {
-	box-sizing: border-box;
-	max-width: 960px;
-	margin: 0 auto;
-}
-
-header {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-
-section {
-	max-width: 480px;
-	padding: 0 1em;
-	margin-bottom: 1em;
 }
 
 #banner {
@@ -375,110 +351,13 @@ footer p {
 	margin: 0;
 }
 
-@media screen and (max-width: 767px) {
-	#nav.closed ul li:not(:first-child) {
-		display: none;
-	}
-	#nav ul li:not(:first-child) {
-		display: block;
-	}
-}
-
 @media screen and (min-width: 767px) {
 	body {
 		background-image: url(../img/planet-desktop.svg);
 	}
-
-	#characters {
-		margin-bottom: 10vh;
-	}
-
-	header {
-		height: 100vh;
-	}
-
-	header h1 {
-		font-size: 4em;
-	}
-
-	#nav ul {
-		display: inline-flex;
-		border-bottom-left-radius: 1em;
-		border-bottom-right-radius: 1em;
-		overflow: hidden;
-	}
-
-	#nav ul li.hamburger {
-		display: none;
-	}
-	#nav ul li {
-		border-right: none;
-		border-top: 4px solid rgba(255, 255, 255, 0);
-	}
-	#nav ul li:hover {
-		border-right: none;
-		border-top: 4px solid rgba(255, 255, 255, 0.5);
-	}
-	#nav ul li.active {
-		border-right: none;
-		border-top: 4px solid rgba(255, 255, 255, 1);
-	}
-
-	#nav ul a {
-		flex-direction: row;
-	}
-	#nav ul a i {
-		padding-right: 0.6em;
-		padding-left: 0;
-	}
-
-	#pistachio {
-		width: 150px;
-		height: 200px;
-		bottom: -5vh;
-	}
-
-	#spacepony {
-		width: 200px;
-		height: 250px;
-		top: -5vh;
-	}
-
-	.projects > ul {
-		padding: 0;
-	}
-}
-
-@media screen and (min-width: 992px), (orientation: landscape) {
-	header {
-		padding-top: 3em;
-	}
-
-	#characters {
-		order: auto;
-		height: auto;
-		width: auto;
-		margin: 0;
-	}
-
-	#pistachio {
-		right: 0;
-		bottom: auto;
-		top: 10vh;
-	}
-
-	#spacepony {
-		left: 0;
-		top: -20vh;
-	}
 }
 
 @media screen and (max-height: 480px) {
-	header {
-		padding-top: 2em;
-		padding-bottom: 1em;
-	}
-
 	#scrollDown {
 		display: none;
 	}

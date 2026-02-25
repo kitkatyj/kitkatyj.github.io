@@ -1,29 +1,6 @@
-var starlax;
-var resizeTimer;
 var copyTimer;
-var timer = 0;
-let DATA = {};
-let showAllValue = {};
 
-function init() {
-	console.log(
-		'%c"Imagination will often carry us to worlds that never were. But without it we go nowhere." -Carl Sagan',
-		"font-size:1.5em; font-style:italic; font-family:'Courier New',monospace; padding:0.5em 0; line-height:1.5;",
-	);
-
-	$(".js-msg").remove();
-
-	starlax = new Starlax({
-		zPos: 10,
-		zPosRandom: 1,
-		color: "#fff",
-	});
-
-	resizePlanet();
-	window.addEventListener("resize", function (e) {
-		resizePlanet();
-	});
-
+function init_index() {
 	$.get("data/index.json", function (data) {
 		DATA = data;
 		Object.entries(DATA).forEach(([key, section]) => {
@@ -53,7 +30,7 @@ function reloadSectionList(section, showAll = false) {
 	Object.entries(sectionList)
 		.slice(0, showAll ? Object.entries(sectionList).length : 3)
 		.forEach(function ([key, project]) {
-			loadProject(project, section);
+			loadProject(key, project, section);
 		});
 
 	let toggleBtn = $(
@@ -64,12 +41,12 @@ function reloadSectionList(section, showAll = false) {
 			"</a>",
 	).click(() => {
 		reloadSectionList(section, !showAll);
-		if (showAll) scrollToSmooth(section);
+		if (showAll) scrollToSmooth(section, 500);
 	});
 	$("#" + section).append(toggleBtn);
 }
 
-function loadProject(project, section) {
+function loadProject(projectid, project, section) {
 	var sectionListElement = $("#" + section + " ul");
 
 	var projectCard = $("<li></li>");
@@ -131,33 +108,16 @@ function loadProject(project, section) {
 		projectCaption.append(projectDescription);
 	}
 
+	console.log(project);
+
 	projectLink.attr({
-		href: project.link,
+		href: "projects/?id=" + projectid,
 		"data-type": project.type,
-		target: "_blank",
 	});
 
 	projectCaptionHold.append(projectCaption);
 	projectCard.append(projectLink);
 	sectionListElement.append(projectCard);
-}
-
-function resizePlanet() {
-	$("footer").css(
-		"height",
-		window.innerWidth >= 767
-			? window.innerWidth / 8
-			: (window.innerWidth * 2) / 3,
-	);
-}
-
-function scrollToSmooth(element) {
-	$("html, body").animate(
-		{
-			scrollTop: $("#" + element).offset().top - $("#nav").height(),
-		},
-		1000,
-	);
 }
 
 function dorkAttack() {
@@ -176,27 +136,4 @@ function copyEmail() {
 	}, 3000);
 }
 
-function copyToClipboard(text) {
-	if (window.clipboardData && window.clipboardData.setData) {
-		return window.clipboardData.setData("Text", text);
-	} else if (
-		document.queryCommandSupported &&
-		document.queryCommandSupported("copy")
-	) {
-		var textarea = document.createElement("textarea");
-		textarea.textContent = text;
-		textarea.style.position = "fixed";
-		document.body.appendChild(textarea);
-		textarea.select();
-		try {
-			return document.execCommand("copy");
-		} catch (ex) {
-			console.warn("Copy to clipboard failed.", ex);
-			return prompt("Copy to clipboard: Ctrl+C, Enter", text);
-		} finally {
-			document.body.removeChild(textarea);
-		}
-	}
-}
-
-window.onload = init;
+$(window).on("load", init_index);
