@@ -108,8 +108,6 @@ function loadProject(projectid, project, section) {
 		projectCaption.append(projectDescription);
 	}
 
-	console.log(project);
-
 	projectLink.attr({
 		href: "projects/?id=" + projectid,
 		"data-type": project.type,

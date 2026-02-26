@@ -28,11 +28,12 @@
 	    <script src="../js/jquery-3.5.0.min.js"></script>
 	    <script src="../js/starlax.js"></script>
 	    <script src="../js/scrollspy.min.js"></script>
-	    <script src="../js/_main.js"></script>
-	    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2581496707093284" crossorigin="anonymous"></script>-->
+	    <script src="../js/main.js"></script>
+	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2581496707093284" crossorigin="anonymous"></script>
 	    <title>kitkatyj</title>
 		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/yamljs@0.3.0/dist/yaml.min.js"></script>
+		<script src="../js//projects.js"></script>
 	</head>
 	<body>
 		<nav id="nav">
@@ -54,108 +55,6 @@
 			<p>Loading project details...</p>
 		</main>
 
-		<script>
-			// 1. Get the project ID from the URL: kitkatyj.com/p/?id=my-project
-			const params = new URLSearchParams(window.location.search);
-			const projectId = params.get("id");
-
-			if (projectId) {
-	            fetch(`./content/${projectId}.md`)
-	                .then(response => {
-	                    if (!response.ok) throw new Error('File not found');
-	                    return response.text();
-	                })
-	                .then(markdown => {
-	                    const contentDiv = document.getElementById('content');
-	                    const markedContent = processMarkdown(markdown);
-						contentDiv.innerHTML = marked.parse(markedContent[1]);
-
-						document.title = markedContent[0].title + ' - kitkatyj';
-
-						console.log(markedContent[0]);
-
-						const releasedDate = new Date(markedContent[0].released);
-						const updatedDate = new Date(markedContent[0].written);
-						$('#released-date > span').text(releasedDate.toLocaleDateString());
-						$('#updated-date > span').text(updatedDate.toLocaleDateString());
-
-						if(markedContent[0].type === 'video') {
-							const youtubeEmbed = $(`<iframe width="560" height="315"
-								src="https://www.youtube.com/embed/${YouTubeGetID(markedContent[0].link)}"
-								title="YouTube video player"
-								frameborder="0" allow="accelerometer; autoplay;
-								clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-								</iframe>`);
-
-							$('header').prepend(youtubeEmbed);
-						} else {
-							const linkBtn = $(`<a
-								class='link-btn'
-								href='${markedContent[0].link}'
-								>
-								<i class="fas fa-rocket"></i> Open Project
-								</a>`)
-							$('header').prepend(linkBtn);
-						}
-	                })
-	                .catch(err => {
-						if(err.message === 'File not found'){
-							document.getElementById('content').innerHTML = `
-					           <h1>Project '${projectId}' Not Found</h1>
-					           <a href="/">Return to Home</a>
-					       `;
-						} else {
-							document.getElementById('content').innerHTML = `
-					           <h1>Error</h1>
-								<p>${err.message}</p>
-					           <a href="/">Return to Home</a>
-					       `;
-						}
-
-	                });
-	        } else {
-	            window.location.href = "/"; // Redirect home if no ID is provided
-	        }
-
-			function processMarkdown(text) {
-			  // 1. Split the Header and Content
-			  // This regex looks for the front-matter block at the very start
-			  const splitRegex = /^---([\s\S]*?)\n---([\s\S]*)/;
-			  const match = text.match(splitRegex);
-
-			  if (!match) return ["", text.trim()];
-
-			  let header = YAML.parse(match[1].trim());
-			  let content = match[2].trim();
-
-			  // 2. Convert [[link|value]] to [value](?id=link)
-			  // \[\[      : Matches literal '[['
-			  // ([^|]+)   : Group 1: Matches everything up to the pipe (the link)
-			  // \|        : Matches the literal pipe '|'
-			  // ([^\]]+)  : Group 2: Matches everything up to the ']]' (the value)
-			  // \]\]      : Matches literal ']]'
-			  const linkRegex = /\[\[([^|]+)\|([^\]]+)\]\]/g;
-
-			  content = content.replace(linkRegex, '[$2](?id=$1)');
-
-			  return [header, content];
-			}
-
-			function YouTubeGetID(url){
-			  var ID = '';
-			  url = url.replace(/(>|<)/gi,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
-			  if(url[2] !== undefined) {
-			    ID = url[2].split(/[^0-9a-z_\-]/i);
-			    ID = ID[0];
-			  }
-			  else {
-			    ID = url;
-			  }
-			    return ID;
-			}
-
-		</script>
 		<footer>
 			<p>Copyright &copy; kitkatyj 2026.</p>
 		</footer>
