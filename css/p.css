@@ -55,6 +55,7 @@ blockquote p {
 
 header {
 	margin-top: 1em;
+	padding-top: 1em;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -88,4 +89,10 @@ header {
 .link-btn:hover {
 	color: #000033;
 	background-color: #ddd093;
+}
+
+header,
+main {
+	margin: 0 auto;
+	max-width: 1280px;
 }
