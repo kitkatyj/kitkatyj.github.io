@@ -21,13 +21,15 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="https://use.typekit.net/hzy4ejt.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/atkinson-hyperlegible-next@5.2.7/index.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/_main.css">
+    <link rel="stylesheet" href="css/home.css">
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/starlax.js"></script>
     <script src="js/scrollspy.min.js"></script>
-    <script src="js/main.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2581496707093284"
-         crossorigin="anonymous"></script>
+    <script src="js/_main.js"></script>
+    <script src="js/home.js"></script>
+    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2581496707093284" crossorigin="anonymous"></script>-->
     <title>kitkatyj</title>
 </head>
     <body>
@@ -35,15 +37,16 @@
             <ul>
                 <li class="hamburger"><a onclick=""><i class="fas fa-bars"></i></a></li>
                 <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
-                <li><a href="#projects"><i class="fas fa-star"></i>Explore</a></li>
-                <li><a href="#about"><i class="fas fa-grin"></i>Who is this?</a></li>
+                <li><a href="#web"><i class="fas fa-arrow-pointer"></i>Web</a></li>
+                <li><a href="#video"><i class="fas fa-circle-play"></i>Video</a></li>
+                <li><a href="#about"><i class="fas fa-comment"></i>Contact</a></li>
             </ul>
         </nav>
         <header id="home">
             <div id="banner">
                 <div id="titles">
                     <h1>kitkatyj</h1>
-                    <p>A space unicorn exploring the universe.</p>
+                    <p>Full stack Developer, Multimedia Producer.</p>
                 </div>
                 <div id="characters">
                     <div class="character" id="pistachio"></div>
@@ -51,16 +54,16 @@
                 </div>
             </div>
         </header>
-        <section id="projects">
-            <h2>Explore</h2>
-            <form>
-                <label for="web-cb"><span>Web</span><i class="fas fa-code"></i><input id="web-cb" type="checkbox" checked></label>
-                <label for="vid-cb"><span>Video</span><i class="fas fa-play-circle"></i><input id="vid-cb" type="checkbox" checked></label>
-            </form>
-            <p>Please enable javascript to view projects.</p>
+        <section id="web" class="projects">
+            <h2>Web</h2>
+            <p class="js-msg">Please enable javascript to view projects.</p>
+        </section>
+        <section id="video" class="projects">
+            <h2>Video</h2>
+            <p class="js-msg">Please enable javascript to view projects.</p>
         </section>
         <section id="about">
-            <h2>Who is this?</h2>
+            <h2>Contact</h2>
             <div id="hello" class="bubble2">
                 <img src="img/melbourne_rainbow.jpg" alt="A selfie of me with a rainbow in a park.">
                 <p>Heya!</p>

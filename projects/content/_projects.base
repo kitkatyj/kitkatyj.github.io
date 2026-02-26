@@ -1,0 +1,22 @@
+formulas:
+  Untitled: ""
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - title
+      - written
+      - released
+      - link
+      - type
+      - tags
+    sort:
+      - property: type
+        direction: DESC
+      - property: released
+        direction: ASC
+    summaries: {}
+    columnSize:
+      file.name: 146
+      note.tags: 199

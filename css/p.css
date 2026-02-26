@@ -1,0 +1,91 @@
+h1,
+h2,
+p {
+	margin: 0;
+	padding-top: 1em;
+	padding-left: 32px;
+	padding-right: 32px;
+}
+canvas {
+	opacity: 0.5;
+}
+
+#nav ul {
+	display: inline-flex;
+	border-bottom-right-radius: 1em;
+	overflow: hidden;
+}
+
+#nav ul a i {
+	padding-right: 0.6em;
+	padding-left: 0;
+}
+
+#nav ul li {
+	border-right: none;
+	border-left: 4px solid rgba(255, 255, 255, 0);
+	background-color: #000022;
+	transition: border-left 0.2s;
+}
+
+#nav ul li:hover {
+	border-right: none;
+	border-left: 4px solid rgba(255, 255, 255, 0.5);
+}
+#nav ul li.active {
+	border-right: none;
+	border-left: 4px solid rgba(255, 255, 255, 1);
+}
+
+img {
+	max-width: 100%;
+}
+
+blockquote {
+	padding: 0.5em 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-bottom-right-radius: 1em;
+	border-top-right-radius: 1em;
+	border-left: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+blockquote p {
+	padding-top: initial;
+}
+
+header {
+	margin-top: 1em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#date-store {
+	padding: 0.5em 1em;
+	border-radius: 1em;
+	margin-top: 1em;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	color: rgba(255, 255, 255, 0.5);
+}
+#date-store > span > span {
+	color: #fff;
+}
+#date-store > span:last-of-type::before {
+	content: " \00B7 ";
+}
+
+.link-btn {
+	text-decoration: none;
+	color: #ddd093;
+	border: 1px solid #ddd093;
+	padding: 0.5em 1em;
+	border-radius: 2em;
+	transition: background-color 0.1s;
+	font-size: 1.2em;
+}
+
+.link-btn:hover {
+	color: #000033;
+	background-color: #ddd093;
+}
